@@ -17,12 +17,12 @@ class CarPage extends Component {
         //const carId = this.props.params.carId;
         const carId = 1762; //заглушка
         const {car} = this.props.carReducer;
-
-        console.log(carId);
-        console.log(car);
+        const myCar = car[carId];
         return (
             <div>
-                <ContainerFluid1 />
+                <ContainerFluid1
+            myCar={myCar}
+            />
                 <ContainerFluid2 />
                 <Row />
                 <PopUpWrapper1 />

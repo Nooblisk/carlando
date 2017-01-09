@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 
 export default class ContainerFluid1 extends Component {
     render(){
+        const {myCar}=this.props;
         return (
 
             <div className='container-fluid'>
@@ -26,7 +27,7 @@ export default class ContainerFluid1 extends Component {
                         <div className='CarPage_Photo_Nav CarPage_Photo_Nav_left'><i className='fa fa-angle-left fa-3x' aria-hidden='true'></i></div>
                         <div className='CarPage_Photo_Nav CarPage_Photo_Nav_right'><i className='fa fa-angle-right  fa-3x' aria-hidden='true'></i></div>
                         <div className='CarPage__state'>
-                            <div className='CarPage__state-inner CarPage__state-inner_color_blue'>Продан</div>
+            {myCar.sold && <div className='CarPage__state-inner CarPage__state-inner_color_blue'>Продан</div>}
                         </div>
                     </div>
 
